@@ -47,7 +47,7 @@ jobs:
 
       - name: Setup Garage
         id: garage
-        uses: ./
+        uses: $/
 
       - name: Verify outputs
         env:
@@ -86,7 +86,7 @@ jobs:
 
       - name: Setup Garage
         id: garage
-        uses: ./
+        uses: $/
         with:
           bucket: custom-bucket
           s3-port: "9000"
@@ -125,6 +125,6 @@ jobs:
     permissions: {}
 
     steps:
-      - uses: lowlydba/are-we-good@f506ed6324f55ec5e4ff5d92204a72c7f1c2b4f8 # v1.0.5
+      - uses: lowlydba/are-we-good@6b10e5f2697555fbaf7f8f37ce38d4454c954a4c # v1.2.2
         with:
           jobs: ${{ toJSON(needs) }}
